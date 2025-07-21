@@ -28,6 +28,19 @@ const Portfolio = () => {
     setIsVisible(true);
   }, []);
 
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/lovable-uploads/83b23e72-d1d7-4e39-ae40-14a7ee2189c7.png';
+    link.download = 'Bhavya_Upadhyay_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleLinkedInClick = () => {
+    window.open('https://linkedin.com/in/bhavyaupadhyay', '_blank');
+  };
+
   const skills = {
     languages: ["Python", "SQL", "JavaScript", "TypeScript"],
     cloud: ["AWS Lambda", "CloudWatch", "Athena", "Git"],
@@ -117,11 +130,11 @@ const Portfolio = () => {
             </p>
           </div>
           <div className={`fade-in-up delay-400 ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-wrap gap-4 justify-center`}>
-            <Button size="lg" variant="secondary" className="glow-on-hover">
+            <Button size="lg" variant="secondary" className="glow-on-hover" onClick={handleDownloadResume}>
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
+            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20" onClick={handleLinkedInClick}>
               <Linkedin className="mr-2 h-5 w-5" />
               Connect on LinkedIn
             </Button>
