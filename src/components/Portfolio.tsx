@@ -403,7 +403,7 @@ const Portfolio = () => {
             Ready to collaborate on exciting data science projects? Let's discuss how we can work together.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
             <div className="flex flex-col items-center space-y-4">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                 <Mail className="h-8 w-8" />
@@ -414,15 +414,6 @@ const Portfolio = () => {
               </div>
             </div>
             
-            <div className="flex flex-col items-center space-y-4">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                <Phone className="h-8 w-8" />
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Phone</h3>
-                <p className="text-blue-100">+91-9315280655</p>
-              </div>
-            </div>
             
             <div className="flex flex-col items-center space-y-4">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
