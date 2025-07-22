@@ -181,29 +181,34 @@ const Portfolio = () => {
           {/* Animated mesh gradient overlay */}
           <div className="absolute inset-0 opacity-40 bg-[radial-gradient(ellipse_at_top_left,hsl(var(--primary)/0.3),transparent_50%),radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)/0.3),transparent_50%),radial-gradient(ellipse_at_center,hsl(var(--secondary)/0.2),transparent_70%)]"></div>
         </div>
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
           <div className={`fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            <h1 className="font-playfair text-6xl md:text-8xl lg:text-9xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight tracking-tight">
               Bhavya Upadhyay
             </h1>
           </div>
           <div className={`fade-in-up delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="text-xl md:text-2xl mb-4 text-blue-100">
-              Aspiring Data Scientist | MS Data Science @ UCI (2025–26)
+            <p className="font-poppins text-xl md:text-3xl lg:text-4xl mb-6 text-blue-100 font-medium tracking-wide">
+              Aspiring Data Scientist
             </p>
           </div>
           <div className={`fade-in-up delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="text-lg md:text-xl mb-8 text-blue-200 max-w-2xl mx-auto">
+            <p className="font-inter text-lg md:text-2xl lg:text-2xl mb-4 text-purple-200 font-light tracking-wide">
+              MS Data Science @ UCI (2025–26)
+            </p>
+          </div>
+          <div className={`fade-in-up delay-400 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <p className="font-inter text-base md:text-xl lg:text-2xl mb-12 text-blue-200 max-w-4xl mx-auto font-light leading-relaxed tracking-wide">
               Building intelligent systems to transform the world through data and AI
             </p>
           </div>
-          <div className={`fade-in-up delay-400 ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-wrap gap-4 justify-center`}>
-            <Button size="lg" variant="secondary" className="glow-on-hover" onClick={handleDownloadResume}>
-              <Download className="mr-2 h-5 w-5" />
+          <div className={`fade-in-up delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-wrap gap-6 justify-center`}>
+            <Button size="lg" variant="secondary" className="glow-on-hover font-poppins font-medium text-lg px-8 py-4" onClick={handleDownloadResume}>
+              <Download className="mr-3 h-6 w-6" />
               Download Resume
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20" onClick={handleLinkedInClick}>
-              <Linkedin className="mr-2 h-5 w-5" />
+            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20 font-poppins font-medium text-lg px-8 py-4" onClick={handleLinkedInClick}>
+              <Linkedin className="mr-3 h-6 w-6" />
               Connect on LinkedIn
             </Button>
           </div>
