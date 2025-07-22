@@ -113,105 +113,50 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
         <div className="absolute inset-0">
-          {/* Your portrait image in black and white as background */}
-          <div 
-            className="absolute inset-0 opacity-15 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('/lovable-uploads/e4670d82-6e0a-4980-b0ed-2fbb3360d7a9.png')`,
-              filter: 'grayscale(100%) contrast(120%) brightness(0.8)',
-              transform: 'scale(1.2)',
-              backgroundPosition: '60% 30%'
-            }}
-          ></div>
+          {/* Mountain landscape background */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900"></div>
           
-          {/* Colorful animated particles */}
-          <div className="absolute inset-0 overflow-hidden">
-            {[...Array(15)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-3 h-3 rounded-full animate-pulse"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  background: `hsl(${220 + Math.random() * 80}, 70%, 60%)`,
-                  animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${2 + Math.random() * 2}s`,
-                  opacity: 0.6
-                }}
-              />
-            ))}
-            
-            {/* Floating colored circles */}
-            {[...Array(6)].map((_, i) => (
-              <div
-                key={`large-${i}`}
-                className="absolute w-24 h-24 rounded-full border-2 opacity-20"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  borderColor: `hsl(${194 + Math.random() * 40}, 76%, 56%)`,
-                  animation: `float ${4 + Math.random() * 2}s ease-in-out infinite`,
-                  animationDelay: `${Math.random() * 2}s`
-                }}
-              />
-            ))}
-            
-            {/* Colorful geometric shapes */}
-            {[...Array(4)].map((_, i) => (
-              <div
-                key={`shape-${i}`}
-                className="absolute w-16 h-16 rotate-45 opacity-20"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  background: `linear-gradient(45deg, hsl(${262 + Math.random() * 30}, 52%, 47%), hsl(${194 + Math.random() * 30}, 76%, 56%))`,
-                  animation: `float ${3 + Math.random() * 2}s ease-in-out infinite reverse`,
-                  animationDelay: `${Math.random() * 3}s`
-                }}
-              />
-            ))}
+          {/* Mountain silhouettes */}
+          <div className="absolute bottom-0 left-0 w-full h-96">
+            <svg viewBox="0 0 1200 400" className="absolute bottom-0 w-full h-full opacity-60">
+              <path d="M0,400 L0,200 L200,150 L400,180 L600,120 L800,160 L1000,100 L1200,140 L1200,400 Z" fill="#1e293b" opacity="0.8"/>
+              <path d="M0,400 L0,250 L150,220 L350,240 L550,190 L750,210 L950,170 L1200,200 L1200,400 Z" fill="#334155" opacity="0.6"/>
+              <path d="M0,400 L0,300 L100,280 L300,290 L500,260 L700,270 L900,250 L1200,270 L1200,400 Z" fill="#475569" opacity="0.4"/>
+            </svg>
           </div>
           
-          {/* Color-tinted overlay for vibrancy */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20"></div>
+          {/* Subtle atmospheric haze */}
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-slate-800/20 to-slate-700/30"></div>
           
-          {/* Gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50"></div>
-          
-          {/* Animated mesh gradient overlay */}
-          <div className="absolute inset-0 opacity-40 bg-[radial-gradient(ellipse_at_top_left,hsl(var(--primary)/0.3),transparent_50%),radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)/0.3),transparent_50%),radial-gradient(ellipse_at_center,hsl(var(--secondary)/0.2),transparent_70%)]"></div>
+          {/* Minimal noise texture */}
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1),transparent_70%)]"></div>
         </div>
         <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
           <div className={`fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="font-playfair text-6xl md:text-8xl lg:text-9xl font-black mb-8 bg-gradient-to-r from-white via-cyan-200 via-purple-300 to-pink-200 bg-clip-text text-transparent leading-tight tracking-tight drop-shadow-2xl">
+            <h1 className="font-inter text-4xl md:text-6xl lg:text-7xl font-light mb-12 text-white tracking-[0.3em] uppercase leading-tight">
               <span className="inline-block hover:scale-105 transition-transform duration-300">
                 Bhavya Upadhyay
               </span>
             </h1>
           </div>
           <div className={`fade-in-up delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="font-poppins text-xl md:text-3xl lg:text-4xl mb-6 text-blue-100 font-medium tracking-wide">
-              Aspiring Data Scientist
+            <p className="font-inter text-base md:text-lg lg:text-xl mb-8 text-slate-300 font-light tracking-[0.2em] uppercase">
+              Data Scientist
             </p>
           </div>
           <div className={`fade-in-up delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="font-inter text-lg md:text-2xl lg:text-2xl mb-4 text-purple-200 font-light tracking-wide">
-              MS Data Science @ UCI (2025–26)
-            </p>
-          </div>
-          <div className={`fade-in-up delay-400 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="font-inter text-base md:text-xl lg:text-2xl mb-12 text-blue-200 max-w-4xl mx-auto font-light leading-relaxed tracking-wide">
-              Building intelligent systems to transform the world through data and AI
+            <p className="font-inter text-sm md:text-base lg:text-lg mb-16 text-slate-400 max-w-2xl mx-auto font-light leading-relaxed tracking-wide">
+              MS Data Science @ UCI · Building intelligent systems through data and AI
             </p>
           </div>
           <div className={`fade-in-up delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-wrap gap-6 justify-center`}>
-            <Button size="lg" variant="secondary" className="glow-on-hover font-poppins font-medium text-lg px-8 py-4" onClick={handleDownloadResume}>
-              <Download className="mr-3 h-6 w-6" />
-              Download Resume
+            <Button size="lg" variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 font-inter font-light text-sm tracking-wider uppercase px-8 py-4" onClick={handleDownloadResume}>
+              <Download className="mr-3 h-4 w-4" />
+              Resume
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20 font-poppins font-medium text-lg px-8 py-4" onClick={handleLinkedInClick}>
-              <Linkedin className="mr-3 h-6 w-6" />
-              Connect on LinkedIn
+            <Button size="lg" variant="outline" className="bg-transparent border-white/30 text-white hover:bg-white/10 font-inter font-light text-sm tracking-wider uppercase px-8 py-4" onClick={handleLinkedInClick}>
+              <Linkedin className="mr-3 h-4 w-4" />
+              LinkedIn
             </Button>
           </div>
         </div>
