@@ -183,8 +183,10 @@ const Portfolio = () => {
         </div>
         <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
           <div className={`fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="font-playfair text-6xl md:text-8xl lg:text-9xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent leading-tight tracking-tight">
-              Bhavya Upadhyay
+            <h1 className="font-playfair text-6xl md:text-8xl lg:text-9xl font-black mb-8 bg-gradient-to-r from-white via-cyan-200 via-purple-300 to-pink-200 bg-clip-text text-transparent leading-tight tracking-tight drop-shadow-2xl">
+              <span className="inline-block hover:scale-105 transition-transform duration-300">
+                Bhavya Upadhyay
+              </span>
             </h1>
           </div>
           <div className={`fade-in-up delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
