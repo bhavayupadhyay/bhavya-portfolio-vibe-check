@@ -113,39 +113,58 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
         <div className="absolute inset-0">
-          {/* Animated background particles */}
+          {/* Your portrait image in black and white as background */}
+          <div 
+            className="absolute inset-0 opacity-15 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('/lovable-uploads/e4670d82-6e0a-4980-b0ed-2fbb3360d7a9.png')`,
+              filter: 'grayscale(100%) contrast(120%) brightness(0.8)',
+              transform: 'scale(1.2)',
+              backgroundPosition: '60% 30%'
+            }}
+          ></div>
+          
+          {/* Colorful animated particles */}
           <div className="absolute inset-0 overflow-hidden">
-            {[...Array(20)].map((_, i) => (
+            {[...Array(15)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-2 h-2 bg-white/20 rounded-full animate-pulse"
+                className="absolute w-3 h-3 rounded-full animate-pulse"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
+                  background: `hsl(${220 + Math.random() * 80}, 70%, 60%)`,
                   animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${2 + Math.random() * 2}s`
+                  animationDuration: `${2 + Math.random() * 2}s`,
+                  opacity: 0.6
                 }}
               />
             ))}
-            {[...Array(8)].map((_, i) => (
+            
+            {/* Floating colored circles */}
+            {[...Array(6)].map((_, i) => (
               <div
                 key={`large-${i}`}
-                className="absolute w-32 h-32 border border-white/10 rounded-full"
+                className="absolute w-24 h-24 rounded-full border-2 opacity-20"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
+                  borderColor: `hsl(${194 + Math.random() * 40}, 76%, 56%)`,
                   animation: `float ${4 + Math.random() * 2}s ease-in-out infinite`,
                   animationDelay: `${Math.random() * 2}s`
                 }}
               />
             ))}
-            {[...Array(5)].map((_, i) => (
+            
+            {/* Colorful geometric shapes */}
+            {[...Array(4)].map((_, i) => (
               <div
-                key={`triangle-${i}`}
-                className="absolute w-0 h-0 border-l-[20px] border-r-[20px] border-b-[35px] border-l-transparent border-r-transparent border-b-white/10"
+                key={`shape-${i}`}
+                className="absolute w-16 h-16 rotate-45 opacity-20"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
+                  background: `linear-gradient(45deg, hsl(${262 + Math.random() * 30}, 52%, 47%), hsl(${194 + Math.random() * 30}, 76%, 56%))`,
                   animation: `float ${3 + Math.random() * 2}s ease-in-out infinite reverse`,
                   animationDelay: `${Math.random() * 3}s`
                 }}
@@ -153,11 +172,14 @@ const Portfolio = () => {
             ))}
           </div>
           
-          {/* Gradient overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
+          {/* Color-tinted overlay for vibrancy */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20"></div>
           
-          {/* Subtle noise texture */}
-          <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
+          {/* Gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50"></div>
+          
+          {/* Animated mesh gradient overlay */}
+          <div className="absolute inset-0 opacity-40 bg-[radial-gradient(ellipse_at_top_left,hsl(var(--primary)/0.3),transparent_50%),radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)/0.3),transparent_50%),radial-gradient(ellipse_at_center,hsl(var(--secondary)/0.2),transparent_70%)]"></div>
         </div>
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <div className={`fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
