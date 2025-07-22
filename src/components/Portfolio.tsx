@@ -109,9 +109,9 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-slate-900 text-slate-100">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0">
           {/* Mountain landscape background */}
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900"></div>
@@ -163,319 +163,279 @@ const Portfolio = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4 bg-background">
+      <section className="py-24 px-4 bg-slate-800">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">About Me</h2>
-            <Separator className="w-24 mx-auto bg-primary" />
+          <div className="text-center mb-20">
+            <h2 className="font-inter text-2xl md:text-3xl font-light mb-6 text-white tracking-[0.3em] uppercase">About</h2>
+            <div className="w-24 h-px bg-slate-400 mx-auto"></div>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <p className="font-inter text-lg text-slate-300 leading-relaxed font-light tracking-wide">
                 A data science enthusiast passionate about solving real-world problems through machine learning and intelligent systems.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="font-inter text-lg text-slate-300 leading-relaxed font-light tracking-wide">
                 Experienced in building data pipelines, deploying AI models, and optimizing workflows with AWS and Python.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="font-inter text-lg text-slate-300 leading-relaxed font-light tracking-wide">
                 Currently pursuing M.S. in Data Science from University of California, Irvine (Fall 2025–Dec 2026).
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <Card className="card-hover">
-                <CardContent className="p-6 text-center">
-                  <Code className="h-12 w-12 mx-auto mb-4 text-primary" />
-                  <h3 className="font-semibold mb-2">Software Development</h3>
-                  <p className="text-sm text-muted-foreground">Full-stack development and cloud solutions</p>
-                </CardContent>
-              </Card>
-              <Card className="card-hover">
-                <CardContent className="p-6 text-center">
-                  <Database className="h-12 w-12 mx-auto mb-4 text-secondary" />
-                  <h3 className="font-semibold mb-2">Data Engineering</h3>
-                  <p className="text-sm text-muted-foreground">ETL pipelines and data optimization</p>
-                </CardContent>
-              </Card>
-              <Card className="card-hover">
-                <CardContent className="p-6 text-center">
-                  <Brain className="h-12 w-12 mx-auto mb-4 text-accent" />
-                  <h3 className="font-semibold mb-2">Machine Learning</h3>
-                  <p className="text-sm text-muted-foreground">AI models and deep learning</p>
-                </CardContent>
-              </Card>
-              <Card className="card-hover">
-                <CardContent className="p-6 text-center">
-                  <Award className="h-12 w-12 mx-auto mb-4 text-warning" />
-                  <h3 className="font-semibold mb-2">Research</h3>
-                  <p className="text-sm text-muted-foreground">Published research and innovation</p>
-                </CardContent>
-              </Card>
-            </div>
+            <div 
+              className="h-96 bg-cover bg-center rounded-lg opacity-80"
+              style={{
+                backgroundImage: `url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&h=400&fit=crop')`,
+                filter: 'grayscale(30%) contrast(110%)'
+              }}
+            ></div>
           </div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section className="py-20 px-4 bg-muted/50">
+      <section className="py-24 px-4 bg-slate-900">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Work Experience</h2>
-            <Separator className="w-24 mx-auto bg-primary" />
+          <div className="text-center mb-20">
+            <h2 className="font-inter text-2xl md:text-3xl font-light mb-6 text-white tracking-[0.3em] uppercase">Experience</h2>
+            <div className="w-24 h-px bg-slate-400 mx-auto"></div>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <Card key={index} className="card-hover">
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <div>
-                      <CardTitle className="text-xl mb-2">{exp.title}</CardTitle>
-                      <CardDescription className="text-lg font-medium text-primary">
-                        {exp.company}
-                      </CardDescription>
-                    </div>
-                    <Badge variant="outline" className="w-fit">
-                      <Calendar className="mr-2 h-4 w-4" />
-                      {exp.period}
-                    </Badge>
+              <div key={index} className="border border-slate-700 bg-slate-800/50 p-8 rounded-lg backdrop-blur-sm">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <div>
+                    <h3 className="font-inter text-xl font-light text-white mb-2 tracking-wide">{exp.title}</h3>
+                    <p className="font-inter text-lg text-slate-300 tracking-wide uppercase text-sm">
+                      {exp.company}
+                    </p>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {exp.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                        <span className="text-muted-foreground">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+                  <span className="font-inter text-slate-400 text-sm tracking-wider mt-2 md:mt-0">
+                    {exp.period}
+                  </span>
+                </div>
+                <ul className="space-y-4">
+                  {exp.achievements.map((achievement, i) => (
+                    <li key={i} className="flex items-start">
+                      <div className="w-1 h-1 bg-slate-400 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                      <span className="font-inter text-slate-300 leading-relaxed font-light">{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-4 bg-background">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-            <Separator className="w-24 mx-auto bg-primary" />
+      <section className="py-24 px-4 bg-slate-800 relative">
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=1200&h=800&fit=crop')`,
+            filter: 'grayscale(100%)'
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-slate-800/80"></div>
+        <div className="relative max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="font-inter text-2xl md:text-3xl font-light mb-6 text-white tracking-[0.3em] uppercase">Projects</h2>
+            <div className="w-24 h-px bg-slate-400 mx-auto"></div>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-12">
             {projects.map((project, index) => (
-              <Card key={index} className="card-hover">
-                <CardHeader>
-                  <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
-                  <CardDescription className="text-base">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-2">
-                    {project.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start">
-                        <div className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-sm text-muted-foreground">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, i) => (
-                      <Badge key={i} variant="secondary">{tech}</Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <div key={index} className="border border-slate-700 bg-slate-900/70 p-8 rounded-lg backdrop-blur-sm">
+                <h3 className="font-inter text-xl font-light text-white mb-4 tracking-wide">{project.title}</h3>
+                <p className="font-inter text-slate-300 mb-6 leading-relaxed font-light">
+                  {project.description}
+                </p>
+                <ul className="space-y-3 mb-6">
+                  {project.achievements.map((achievement, i) => (
+                    <li key={i} className="flex items-start">
+                      <div className="w-1 h-1 bg-slate-400 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                      <span className="font-inter text-sm text-slate-300 font-light">{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-3">
+                  {project.tech.map((tech, i) => (
+                    <span key={i} className="font-inter text-xs text-slate-400 border border-slate-600 px-3 py-1 rounded tracking-wider uppercase">{tech}</span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Publications Section */}
-      <section className="py-20 px-4 bg-muted/50">
+      <section className="py-24 px-4 bg-slate-900">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Research Publications</h2>
-            <Separator className="w-24 mx-auto bg-primary" />
+          <div className="text-center mb-20">
+            <h2 className="font-inter text-2xl md:text-3xl font-light mb-6 text-white tracking-[0.3em] uppercase">Publications</h2>
+            <div className="w-24 h-px bg-slate-400 mx-auto"></div>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-8">
             {publications.map((pub, index) => (
-              <Card key={index} className="card-hover">
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between">
-                    <div className="flex-1">
-                      <CardTitle className="text-lg mb-2">{pub.title}</CardTitle>
-                      <CardDescription className="text-base font-medium text-secondary mb-2">
-                        {pub.journal}
-                      </CardDescription>
-                      <p className="text-muted-foreground">{pub.achievement}</p>
-                    </div>
-                    <Badge variant="outline" className="w-fit mt-4 md:mt-0">
-                      <Calendar className="mr-2 h-4 w-4" />
-                      {pub.period}
-                    </Badge>
+              <div key={index} className="border border-slate-700 bg-slate-800/50 p-8 rounded-lg backdrop-blur-sm">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between">
+                  <div className="flex-1">
+                    <h3 className="font-inter text-xl font-light text-white mb-3 tracking-wide">{pub.title}</h3>
+                    <p className="font-inter text-slate-300 font-light mb-4 tracking-wide uppercase text-sm">
+                      {pub.journal}
+                    </p>
+                    <p className="font-inter text-slate-300 font-light leading-relaxed">{pub.achievement}</p>
                   </div>
-                </CardHeader>
-              </Card>
+                  <span className="font-inter text-slate-400 text-sm tracking-wider mt-4 md:mt-0">
+                    {pub.period}
+                  </span>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 px-4 bg-background">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Technical Skills</h2>
-            <Separator className="w-24 mx-auto bg-primary" />
+      <section className="py-24 px-4 bg-slate-800 relative">
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1200&h=800&fit=crop')`,
+            filter: 'grayscale(100%)'
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-slate-800/80"></div>
+        <div className="relative max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="font-inter text-2xl md:text-3xl font-light mb-6 text-white tracking-[0.3em] uppercase">Skills</h2>
+            <div className="w-24 h-px bg-slate-400 mx-auto"></div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="card-hover">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Code className="mr-3 h-6 w-6 text-primary" />
-                  Languages & Cloud
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skills.languages.concat(skills.cloud).map((skill, i) => (
-                    <Badge key={i} variant="outline">{skill}</Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="border border-slate-700 bg-slate-900/70 p-8 rounded-lg backdrop-blur-sm">
+              <h3 className="font-inter text-lg font-light text-white mb-6 tracking-wider uppercase">Languages & Cloud</h3>
+              <div className="flex flex-wrap gap-3">
+                {skills.languages.concat(skills.cloud).map((skill, i) => (
+                  <span key={i} className="font-inter text-xs text-slate-400 border border-slate-600 px-3 py-1 rounded tracking-wider uppercase">{skill}</span>
+                ))}
+              </div>
+            </div>
 
-            <Card className="card-hover">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Database className="mr-3 h-6 w-6 text-secondary" />
-                  Libraries & Tools
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skills.tools.map((skill, i) => (
-                    <Badge key={i} variant="outline">{skill}</Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <div className="border border-slate-700 bg-slate-900/70 p-8 rounded-lg backdrop-blur-sm">
+              <h3 className="font-inter text-lg font-light text-white mb-6 tracking-wider uppercase">Libraries & Tools</h3>
+              <div className="flex flex-wrap gap-3">
+                {skills.tools.map((skill, i) => (
+                  <span key={i} className="font-inter text-xs text-slate-400 border border-slate-600 px-3 py-1 rounded tracking-wider uppercase">{skill}</span>
+                ))}
+              </div>
+            </div>
 
-            <Card className="card-hover">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Brain className="mr-3 h-6 w-6 text-accent" />
-                  ML & AI
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skills.ml.concat(skills.frameworks).map((skill, i) => (
-                    <Badge key={i} variant="outline">{skill}</Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <div className="border border-slate-700 bg-slate-900/70 p-8 rounded-lg backdrop-blur-sm">
+              <h3 className="font-inter text-lg font-light text-white mb-6 tracking-wider uppercase">ML & AI</h3>
+              <div className="flex flex-wrap gap-3">
+                {skills.ml.concat(skills.frameworks).map((skill, i) => (
+                  <span key={i} className="font-inter text-xs text-slate-400 border border-slate-600 px-3 py-1 rounded tracking-wider uppercase">{skill}</span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Education Section */}
-      <section className="py-20 px-4 bg-muted/50">
+      <section className="py-24 px-4 bg-slate-900">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Education</h2>
-            <Separator className="w-24 mx-auto bg-primary" />
+          <div className="text-center mb-20">
+            <h2 className="font-inter text-2xl md:text-3xl font-light mb-6 text-white tracking-[0.3em] uppercase">Education</h2>
+            <div className="w-24 h-px bg-slate-400 mx-auto"></div>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="card-hover">
-              <CardHeader>
-                <div className="flex items-start space-x-4">
-                  <GraduationCap className="h-8 w-8 text-primary mt-1" />
-                  <div>
-                    <CardTitle className="text-xl mb-2">University of California, Irvine (UCI)</CardTitle>
-                    <CardDescription className="text-lg font-medium text-primary">
-                      M.S. in Data Science
-                    </CardDescription>
-                    <Badge variant="outline" className="mt-2">
-                      Sept 2025 – Dec 2026
-                    </Badge>
-                  </div>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="border border-slate-700 bg-slate-800/50 p-8 rounded-lg backdrop-blur-sm">
+              <div className="flex items-start space-x-6">
+                <GraduationCap className="h-8 w-8 text-slate-400 mt-1" />
+                <div>
+                  <h3 className="font-inter text-xl font-light text-white mb-3 tracking-wide">University of California, Irvine</h3>
+                  <p className="font-inter text-slate-300 font-light mb-4 tracking-wide uppercase text-sm">
+                    M.S. in Data Science
+                  </p>
+                  <span className="font-inter text-slate-400 text-sm tracking-wider">
+                    Sept 2025 – Dec 2026
+                  </span>
                 </div>
-              </CardHeader>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="card-hover">
-              <CardHeader>
-                <div className="flex items-start space-x-4">
-                  <GraduationCap className="h-8 w-8 text-secondary mt-1" />
-                  <div>
-                    <CardTitle className="text-xl mb-2">SRM Institute of Science and Technology</CardTitle>
-                    <CardDescription className="text-lg font-medium text-secondary">
-                      B.Tech in ECE with Data Science
-                    </CardDescription>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      <Badge variant="outline">2020–2024</Badge>
-                      <Badge variant="secondary">GPA: 8.87/10.0</Badge>
-                    </div>
+            <div className="border border-slate-700 bg-slate-800/50 p-8 rounded-lg backdrop-blur-sm">
+              <div className="flex items-start space-x-6">
+                <GraduationCap className="h-8 w-8 text-slate-400 mt-1" />
+                <div>
+                  <h3 className="font-inter text-xl font-light text-white mb-3 tracking-wide">SRM Institute of Science and Technology</h3>
+                  <p className="font-inter text-slate-300 font-light mb-4 tracking-wide uppercase text-sm">
+                    B.Tech in ECE with Data Science
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <span className="font-inter text-slate-400 text-sm tracking-wider">2020–2024</span>
+                    <span className="font-inter text-slate-400 text-sm tracking-wider">GPA: 8.87/10.0</span>
                   </div>
                 </div>
-              </CardHeader>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-gradient-primary">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-4xl font-bold mb-8">Let's Connect</h2>
-          <p className="text-xl mb-12 text-blue-100">
-            Ready to collaborate on exciting data science projects? Let's discuss how we can work together.
-          </p>
+      <section className="py-24 px-4 bg-slate-900 relative">
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=800&fit=crop')`,
+            filter: 'grayscale(100%)'
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-slate-900/70"></div>
+        <div className="relative max-w-4xl mx-auto text-center text-white">
+          <h2 className="font-inter text-2xl md:text-3xl font-light mb-12 tracking-[0.3em] uppercase">Connect</h2>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
-            <div className="flex flex-col items-center space-y-4">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                <Mail className="h-8 w-8" />
+          <div className="grid md:grid-cols-2 gap-12 mb-16 max-w-2xl mx-auto">
+            <div className="flex flex-col items-center space-y-6">
+              <div className="w-12 h-12 border border-slate-600 rounded-full flex items-center justify-center">
+                <Mail className="h-5 w-5 text-slate-300" />
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Email</h3>
-                <p className="text-blue-100">officiallybhavya@gmail.com</p>
+                <h3 className="font-inter font-light mb-3 tracking-wider uppercase text-sm">Email</h3>
+                <p className="font-inter text-slate-300 font-light tracking-wide">officiallybhavya@gmail.com</p>
               </div>
             </div>
             
-            
-            <div className="flex flex-col items-center space-y-4">
-              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                <Linkedin className="h-8 w-8" />
+            <div className="flex flex-col items-center space-y-6">
+              <div className="w-12 h-12 border border-slate-600 rounded-full flex items-center justify-center">
+                <Linkedin className="h-5 w-5 text-slate-300" />
               </div>
               <div>
-                <h3 className="font-semibold mb-2">LinkedIn</h3>
-                <p className="text-blue-100">linkedin.com/in/bhavyaupadhyay</p>
+                <h3 className="font-inter font-light mb-3 tracking-wider uppercase text-sm">LinkedIn</h3>
+                <p className="font-inter text-slate-300 font-light tracking-wide">linkedin.com/in/bhavyaupadhyay</p>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="glow-on-hover">
-              <Mail className="mr-2 h-5 w-5" />
-              Send Email
+          <div className="flex flex-wrap gap-6 justify-center">
+            <Button size="lg" variant="outline" className="bg-transparent border-slate-600 text-slate-300 hover:bg-slate-800 font-inter font-light text-sm tracking-wider uppercase px-8 py-4">
+              <Mail className="mr-3 h-4 w-4" />
+              Email
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
-              <Linkedin className="mr-2 h-5 w-5" />
-              LinkedIn Profile
+            <Button size="lg" variant="outline" className="bg-transparent border-slate-600 text-slate-300 hover:bg-slate-800 font-inter font-light text-sm tracking-wider uppercase px-8 py-4">
+              <Linkedin className="mr-3 h-4 w-4" />
+              LinkedIn
             </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 bg-primary text-primary-foreground">
+      <footer className="py-12 px-4 bg-slate-950 text-slate-400">
         <div className="max-w-6xl mx-auto text-center">
-          <p>&copy; 2024 Bhavya Upadhyay. All rights reserved.</p>
+          <p className="font-inter text-sm tracking-wider uppercase">&copy; 2024 Bhavya Upadhyay</p>
         </div>
       </footer>
     </div>
