@@ -84,14 +84,25 @@ const Portfolio = () => {
       tech: ["n8n", "OpenAI GPT-4", "DALL·E", "Gmail API", "Telegram Bot", "Social Media APIs"]
     },
     {
-      title: "Duplicate Detection in Job Postings Using LLMs",
-      description: "Semantic similarity pipeline for job posting deduplication",
+      title: "Construction Site Object Detection Using YOLOv8",
+      description: "Real-time detection system for construction safety monitoring",
       achievements: [
-        "Built semantic similarity pipeline using Sentence Transformers and LLMs",
-        "Boosted precision from 68% to 92% on 250K+ entries",
-        "Deployed with Milvus + RAG; cut manual effort by 70%"
+        "Real-time detection of 12+ object classes from 500+ hours of video",
+        "Improved accuracy from 70% to 98%; reduced safety incidents by 25%",
+        "Deployed computer vision pipeline for PPE detection and safety monitoring"
       ],
-      tech: ["LLMs", "Sentence Transformers", "Milvus", "RAG", "NLP"]
+      tech: ["YOLOv8", "Computer Vision", "Python", "Deep Learning", "OpenCV"]
+    },
+    {
+      title: "LinkedIn Post Generator using Llama 3.2",
+      description: "AI-powered content generation tool that analyzes writing styles",
+      achievements: [
+        "Analyzes LinkedIn influencer posts to extract topics, language, and writing style",
+        "Uses few-shot learning with Llama 3.2 for personalized content generation",
+        "Built with Streamlit interface for topic selection and post customization",
+        "Enables content creators to maintain consistent voice across posts"
+      ],
+      tech: ["Llama 3.2", "Python", "Streamlit", "Few-shot Learning", "NLP", "Groq API"]
     }
   ];
 
@@ -334,7 +345,14 @@ const Portfolio = () => {
                     <Button 
                       variant="ghost" 
                       className="text-primary hover:text-primary-foreground hover:bg-primary w-full"
-                      onClick={() => window.open(index === 0 ? 'https://github.com/bhavayupadhyay/Automate-Multi-Platform-Social-Media-Content-Creation-with-n8n' : 'https://github.com/bhavayupadhyay/Duplicate-Detection-Job-Postings', '_blank')}
+                      onClick={() => {
+                        const links = [
+                          'https://github.com/bhavayupadhyay/Automate-Multi-Platform-Social-Media-Content-Creation-with-n8n',
+                          'https://github.com/bhavayupadhyay/Construction-Site-Object-Detection',
+                          'https://github.com/bhavayupadhyay/LinkedIn-Post-Generator-using-Llama-3.2'
+                        ];
+                        window.open(links[index], '_blank');
+                      }}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       View Details
