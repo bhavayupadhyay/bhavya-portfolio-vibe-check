@@ -73,13 +73,15 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "Construction Site Object Detection Using YOLOv8",
-      description: "Real-time detection system for construction safety monitoring",
+      title: "Social Media Automation System with n8n",
+      description: "End-to-end automated content creation and publishing across multiple platforms",
       achievements: [
-        "Real-time detection of 12+ object classes from 500+ hours of video",
-        "Improved accuracy from 70% to 98%; reduced safety incidents by 25%"
+        "Built automated workflow with n8n, GPT-4, and DALL·E for content generation",
+        "Integrated approval flow via Gmail & Telegram for quality control",
+        "Automated posting to Instagram, Facebook, LinkedIn, and Twitter (X)",
+        "Aggregated results reporting via email and Telegram notifications"
       ],
-      tech: ["YOLOv8", "Computer Vision", "Python", "Deep Learning"]
+      tech: ["n8n", "OpenAI GPT-4", "DALL·E", "Gmail API", "Telegram Bot", "Social Media APIs"]
     },
     {
       title: "Duplicate Detection in Job Postings Using LLMs",
@@ -332,7 +334,7 @@ const Portfolio = () => {
                     <Button 
                       variant="ghost" 
                       className="text-primary hover:text-primary-foreground hover:bg-primary w-full"
-                      onClick={() => window.open('https://github.com/bhavayupadhyay/Construction-Site-Object-Detection', '_blank')}
+                      onClick={() => window.open(index === 0 ? 'https://github.com/bhavayupadhyay/Automate-Multi-Platform-Social-Media-Content-Creation-with-n8n' : 'https://github.com/bhavayupadhyay/Duplicate-Detection-Job-Postings', '_blank')}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       View Details
