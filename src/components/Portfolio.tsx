@@ -329,7 +329,11 @@ const Portfolio = () => {
                   
                   {/* View Project Button */}
                   <div className="mt-6 pt-4 border-t border-border/30">
-                    <Button variant="ghost" className="text-primary hover:text-primary-foreground hover:bg-primary w-full">
+                    <Button 
+                      variant="ghost" 
+                      className="text-primary hover:text-primary-foreground hover:bg-primary w-full"
+                      onClick={() => window.open('https://github.com/bhavayupadhyay/Construction-Site-Object-Detection', '_blank')}
+                    >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       View Details
                     </Button>
