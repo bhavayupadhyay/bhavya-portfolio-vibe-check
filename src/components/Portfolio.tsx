@@ -125,99 +125,75 @@ const Portfolio = () => {
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20"></div>
-        
-        {/* Floating particles */}
+        {/* Subtle animated background elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary-glow rounded-full animate-pulse opacity-60"></div>
-          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-accent rounded-full animate-pulse opacity-40 animation-delay-1000"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-secondary/60 rounded-full animate-pulse opacity-30 animation-delay-2000"></div>
-          <div className="absolute top-2/3 right-1/4 w-1.5 h-1.5 bg-primary-glow rounded-full animate-pulse opacity-50 animation-delay-3000"></div>
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-accent/60 rounded-full animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-lavender/40 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-blush/30 rounded-full animate-pulse delay-2000"></div>
+          <div className="absolute top-2/3 right-1/4 w-1.5 h-1.5 bg-accent/50 rounded-full animate-pulse delay-3000"></div>
         </div>
         
-        {/* Modern mountain silhouettes with gradients */}
-        <div className="absolute bottom-0 left-0 w-full h-96">
-          <svg viewBox="0 0 1200 400" className="absolute bottom-0 w-full h-full">
+        {/* Clean geometric background elements */}
+        <div className="absolute bottom-0 left-0 w-full h-80 opacity-20">
+          <svg viewBox="0 0 1200 320" className="absolute bottom-0 w-full h-full">
             <defs>
               <linearGradient id="mountain1" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style={{stopColor: 'hsl(var(--primary))', stopOpacity: 0.9}} />
-                <stop offset="100%" style={{stopColor: 'hsl(var(--primary))', stopOpacity: 0.3}} />
+                <stop offset="0%" style={{stopColor: 'hsl(var(--primary))', stopOpacity: 0.3}} />
+                <stop offset="100%" style={{stopColor: 'hsl(var(--primary))', stopOpacity: 0.05}} />
               </linearGradient>
               <linearGradient id="mountain2" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style={{stopColor: 'hsl(var(--secondary))', stopOpacity: 0.7}} />
-                <stop offset="100%" style={{stopColor: 'hsl(var(--secondary))', stopOpacity: 0.2}} />
-              </linearGradient>
-              <linearGradient id="mountain3" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style={{stopColor: 'hsl(var(--accent))', stopOpacity: 0.5}} />
-                <stop offset="100%" style={{stopColor: 'hsl(var(--accent))', stopOpacity: 0.1}} />
+                <stop offset="0%" style={{stopColor: 'hsl(var(--accent))', stopOpacity: 0.2}} />
+                <stop offset="100%" style={{stopColor: 'hsl(var(--accent))', stopOpacity: 0.02}} />
               </linearGradient>
             </defs>
-            <path d="M0,400 L0,200 L200,150 L400,180 L600,120 L800,160 L1000,100 L1200,140 L1200,400 Z" fill="url(#mountain1)"/>
-            <path d="M0,400 L0,250 L150,220 L350,240 L550,190 L750,210 L950,170 L1200,200 L1200,400 Z" fill="url(#mountain2)"/>
-            <path d="M0,400 L0,300 L100,280 L300,290 L500,260 L700,270 L900,250 L1200,270 L1200,400 Z" fill="url(#mountain3)"/>
+            <path d="M0,320 L0,160 L200,120 L400,140 L600,100 L800,130 L1000,90 L1200,110 L1200,320 Z" fill="url(#mountain1)"/>
+            <path d="M0,320 L0,200 L150,180 L350,190 L550,160 L750,170 L950,140 L1200,160 L1200,320 Z" fill="url(#mountain2)"/>
           </svg>
         </div>
         
-        {/* Atmospheric glow */}
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-primary/5 to-secondary/5"></div>
-        
-        <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
-          {/* Enhanced backdrop for better text visibility */}
-          <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/40 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl"></div>
+        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+          <div className={`fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <h1 className="heading-hero mb-4 text-gradient-primary">
+              <span className="inline-block hover:scale-105 transition-all duration-500 glow-on-hover">
+                Bhavya Upadhyay
+              </span>
+            </h1>
+          </div>
           
-          <div className="relative z-10 py-16 px-8">
-            <div className={`fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-              <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 leading-none">
-                <span className="inline-block hover:scale-105 transition-all duration-700 glow-on-hover bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent drop-shadow-2xl">
-                  Bhavya Upadhyay
-                </span>
-              </h1>
-              {/* Animated underline */}
-              <div className="w-32 h-1.5 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full shadow-lg mb-8 animate-pulse"></div>
+          <div className={`fade-in-up delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <p className="text-large text-accent font-medium mb-2">
+              Data Scientist & AI Engineer
+            </p>
+            <div className="w-16 h-0.5 bg-accent mx-auto rounded-full mb-8"></div>
+          </div>
+          
+          <div className={`fade-in-up delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className="bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-8 mb-12 shadow-soft max-w-4xl mx-auto">
+              <p className="text-body text-muted-foreground leading-relaxed">
+                <span className="text-primary font-semibold">MS Data Science @ UCI</span> · 
+                Transforming complex data into intelligent solutions that drive innovation and meaningful impact across industries.
+              </p>
             </div>
-            
-            <div className={`fade-in-up delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-              <div className="relative mb-8">
-                <p className="font-playfair text-2xl md:text-3xl lg:text-4xl font-semibold bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent mb-2">
-                  Data Scientist & AI Engineer
-                </p>
-                <div className="flex items-center justify-center gap-3 text-primary/80">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-lg font-medium">Innovating with Intelligence</span>
-                  <div className="w-2 h-2 bg-accent rounded-full animate-pulse animation-delay-500"></div>
-                </div>
-              </div>
-            </div>
-            
-            <div className={`fade-in-up delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-              <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 mb-12 shadow-xl">
-                <p className="text-lg md:text-xl lg:text-2xl text-foreground font-medium leading-relaxed max-w-5xl mx-auto">
-                  MS Data Science @ UCI · <span className="text-primary font-semibold">Transforming complex data</span> into 
-                  <span className="text-accent font-semibold"> intelligent solutions</span> that drive innovation and impact
-                </p>
-              </div>
-            </div>
-            
-            <div className={`fade-in-up delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-wrap gap-8 justify-center`}>
-              <Button 
-                size="lg" 
-                className="group bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-white font-semibold text-lg px-12 py-6 rounded-2xl shadow-2xl hover:shadow-glow transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 border-2 border-white/20" 
-                onClick={handleDownloadResume}
-              >
-                <Download className="mr-3 h-6 w-6 group-hover:animate-bounce" />
-                Download Resume
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="group border-3 border-primary/80 bg-white/10 backdrop-blur-lg text-primary hover:bg-primary hover:text-white font-semibold text-lg px-12 py-6 rounded-2xl shadow-xl hover:shadow-glow transform hover:-translate-y-2 hover:scale-105 transition-all duration-300" 
-                onClick={handleLinkedInClick}
-              >
-                <Linkedin className="mr-3 h-6 w-6 group-hover:animate-pulse" />
-                Connect on LinkedIn
-              </Button>
-            </div>
+          </div>
+          
+          <div className={`fade-in-up delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-wrap gap-6 justify-center`}>
+            <Button 
+              size="lg" 
+              className="btn-primary px-8 py-4 rounded-xl text-base font-medium shadow-md hover:shadow-lg transition-all duration-300" 
+              onClick={handleDownloadResume}
+            >
+              <Download className="mr-3 h-5 w-5" />
+              Download Resume
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-4 rounded-xl text-base font-medium shadow-md hover:shadow-lg transition-all duration-300" 
+              onClick={handleLinkedInClick}
+            >
+              <Linkedin className="mr-3 h-5 w-5" />
+              Connect on LinkedIn
+            </Button>
           </div>
         </div>
       </section>
@@ -226,9 +202,9 @@ const Portfolio = () => {
       <section className="py-24 px-4 bg-gradient-to-br from-card via-background to-muted/50 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5"></div>
         <div className="max-w-6xl mx-auto relative">
-          <div className="text-center mb-20">
-            <h2 className="heading-secondary mb-8 text-primary-gradient">About Me</h2>
-            <div className="w-24 h-1.5 bg-gradient-primary mx-auto rounded-full shadow-lg"></div>
+          <div className="text-center mb-16">
+            <h2 className="heading-section mb-4 text-primary">About Me</h2>
+            <div className="w-16 h-0.5 bg-accent mx-auto rounded-full"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 fade-in-left">
@@ -267,9 +243,9 @@ const Portfolio = () => {
       <section className="py-24 px-4 bg-background relative">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-primary/5 to-accent/5"></div>
         <div className="max-w-6xl mx-auto relative">
-          <div className="text-center mb-20">
-            <h2 className="heading-secondary mb-8 text-secondary-gradient">Work Experience</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full shadow-lg"></div>
+          <div className="text-center mb-16">
+            <h2 className="heading-section mb-4 text-primary">Work Experience</h2>
+            <div className="w-16 h-0.5 bg-accent mx-auto rounded-full"></div>
           </div>
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -325,9 +301,9 @@ const Portfolio = () => {
         </div>
         
         <div className="relative max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="heading-secondary mb-8 text-primary-gradient">Featured Projects</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full shadow-lg"></div>
+          <div className="text-center mb-16">
+            <h2 className="heading-section mb-4 text-primary">Featured Projects</h2>
+            <div className="w-16 h-0.5 bg-accent mx-auto rounded-full"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             {projects.map((project, index) => (
@@ -434,9 +410,9 @@ const Portfolio = () => {
         </div>
         
         <div className="relative max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="heading-secondary mb-8 text-secondary-gradient">Technical Skills</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-accent via-primary to-secondary mx-auto rounded-full shadow-lg"></div>
+          <div className="text-center mb-16">
+            <h2 className="heading-section mb-4 text-primary">Technical Skills</h2>
+            <div className="w-16 h-0.5 bg-accent mx-auto rounded-full"></div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -548,8 +524,8 @@ const Portfolio = () => {
         
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="mb-20">
-            <h2 className="heading-secondary mb-8 text-primary-gradient">Let's Connect</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-secondary via-primary to-accent mx-auto rounded-full shadow-lg"></div>
+            <h2 className="heading-section mb-4 text-primary">Let's Connect</h2>
+            <div className="w-16 h-0.5 bg-accent mx-auto rounded-full"></div>
             <p className="text-body text-muted-foreground mt-8 max-w-3xl mx-auto leading-relaxed">
               Ready to collaborate on innovative data science projects? Let's explore how we can create intelligent solutions together.
             </p>

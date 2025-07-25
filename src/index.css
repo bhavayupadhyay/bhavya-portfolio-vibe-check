@@ -2,68 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Professional Portfolio Design System - Modern Blue/Purple Theme
+/* Clean Modern Design System - Soft Professional Theme
+Minimalistic palette with elegant typography and subtle accents.
 All colors MUST be HSL for consistency and theming.
 */
 
 @layer base {
   :root {
-    /* Background System */
-    --background: 220 20% 98%;
-    --foreground: 222 84% 4.9%;
+    /* Background System - Soft Off-White */
+    --background: 0 0% 98%;
+    --foreground: 220 25% 15%;
 
-    /* Card System */
+    /* Card System - Pure White with Subtle Shadow */
     --card: 0 0% 100%;
-    --card-foreground: 222 84% 4.9%;
+    --card-foreground: 220 25% 15%;
 
     /* Popover System */
     --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 4.9%;
+    --popover-foreground: 220 25% 15%;
 
-    /* Primary Brand Colors - Deep Blue */
-    --primary: 224 76% 48%;
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 224 100% 65%;
+    /* Primary - Deep Navy */
+    --primary: 220 40% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 220 35% 35%;
 
-    /* Secondary Colors - Sophisticated Purple */
-    --secondary: 262 52% 47%;
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary - Charcoal */
+    --secondary: 215 25% 25%;
+    --secondary-foreground: 0 0% 98%;
 
-    /* Accent Colors - Vibrant Cyan */
-    --accent: 194 76% 56%;
-    --accent-foreground: 222 84% 4.9%;
+    /* Accent - Muted Teal */
+    --accent: 180 25% 45%;
+    --accent-foreground: 0 0% 98%;
+    --accent-light: 180 30% 55%;
+
+    /* Soft Lavender Accent */
+    --lavender: 260 15% 65%;
+    --lavender-foreground: 220 25% 15%;
+
+    /* Blush Pink Accent */
+    --blush: 340 25% 75%;
+    --blush-foreground: 220 25% 15%;
 
     /* Muted Colors */
-    --muted: 220 14% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 215 15% 50%;
 
     /* Neutral System */
-    --neutral-light: 220 14% 96%;
-    --neutral-medium: 215 16% 47%;
-    --neutral-dark: 222 84% 4.9%;
+    --neutral-50: 0 0% 98%;
+    --neutral-100: 0 0% 96%;
+    --neutral-200: 0 0% 90%;
+    --neutral-300: 215 10% 75%;
+    --neutral-400: 215 15% 60%;
+    --neutral-500: 215 15% 50%;
+    --neutral-600: 215 20% 40%;
+    --neutral-700: 215 25% 30%;
+    --neutral-800: 220 25% 20%;
+    --neutral-900: 220 25% 15%;
 
     /* Status Colors */
-    --success: 142 76% 36%;
-    --warning: 38 92% 50%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --success: 140 30% 45%;
+    --warning: 40 60% 55%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 0 0% 98%;
 
     /* Border and Input */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 76% 48%;
+    --border: 0 0% 92%;
+    --input: 0 0% 95%;
+    --ring: 180 25% 45%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--neutral-light)) 100%);
+    /* Subtle Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-soft: linear-gradient(135deg, hsl(var(--accent-light)) 0%, hsl(var(--lavender)) 50%, hsl(var(--blush)) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--neutral-50)) 100%);
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(var(--primary) / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(var(--primary) / 0.1), 0 10px 10px -5px hsl(var(--primary) / 0.04);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+    /* Elegant Shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(220 25% 15% / 0.08);
+    --shadow-md: 0 4px 6px -1px hsl(220 25% 15% / 0.1), 0 2px 4px -1px hsl(220 25% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 25% 15% / 0.1), 0 4px 6px -2px hsl(220 25% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 25% 15% / 0.1), 0 10px 10px -5px hsl(220 25% 15% / 0.04);
+    --shadow-soft: 0 8px 30px hsl(180 25% 45% / 0.12);
 
     /* Animation Timings */
     --transition-fast: 0.15s ease-out;
@@ -72,76 +89,70 @@ All colors MUST be HSL for consistency and theming.
 
     --radius: 0.75rem;
 
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-foreground: 220 25% 15%;
+    --sidebar-primary: 220 40% 25%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 220 25% 15%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 180 25% 45%;
   }
 
   .dark {
     /* Background System - Dark */
-    --background: 222 84% 5%;
-    --foreground: 210 40% 98%;
+    --background: 220 25% 8%;
+    --foreground: 0 0% 95%;
 
     /* Card System - Dark */
-    --card: 222 84% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 25% 12%;
+    --card-foreground: 0 0% 95%;
 
     /* Popover System - Dark */
-    --popover: 222 84% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Primary Brand Colors - Bright Blue */
-    --primary: 224 100% 65%;
-    --primary-foreground: 222 84% 5%;
-    --primary-glow: 224 100% 75%;
+    /* Primary - Lighter Navy */
+    --primary: 220 45% 65%;
+    --primary-foreground: 220 25% 8%;
+    --primary-light: 220 50% 75%;
 
-    /* Secondary Colors - Bright Purple */
-    --secondary: 262 70% 60%;
-    --secondary-foreground: 222 84% 5%;
+    /* Secondary - Light Charcoal */
+    --secondary: 215 30% 65%;
+    --secondary-foreground: 220 25% 8%;
 
-    /* Accent Colors - Bright Cyan */
-    --accent: 194 100% 70%;
-    --accent-foreground: 222 84% 5%;
+    /* Accent - Bright Teal */
+    --accent: 180 35% 65%;
+    --accent-foreground: 220 25% 8%;
+    --accent-light: 180 40% 75%;
+
+    /* Soft Lavender - Dark Mode */
+    --lavender: 260 25% 75%;
+    --lavender-foreground: 220 25% 8%;
+
+    /* Blush Pink - Dark Mode */
+    --blush: 340 35% 80%;
+    --blush-foreground: 220 25% 8%;
 
     /* Muted Colors - Dark */
-    --muted: 217 32% 18%;
-    --muted-foreground: 215 20% 65%;
-
-    /* Neutral System - Dark */
-    --neutral-light: 217 32% 18%;
-    --neutral-medium: 215 20% 65%;
-    --neutral-dark: 210 40% 98%;
-
-    /* Status Colors - Dark */
-    --success: 142 76% 40%;
-    --warning: 38 92% 55%;
-    --destructive: 0 84% 65%;
-    --destructive-foreground: 210 40% 98%;
+    --muted: 220 25% 18%;
+    --muted-foreground: 215 15% 65%;
 
     /* Border and Input - Dark */
-    --border: 217 32% 18%;
-    --input: 217 32% 18%;
-    --ring: 224 100% 65%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 25% 20%;
+    --input: 220 25% 18%;
+    --ring: 180 35% 65%;
+
+    /* Dark mode sidebar */
+    --sidebar-background: 220 25% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 220 45% 65%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 25% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 220 25% 20%;
+    --sidebar-ring: 180 35% 65%;
   }
 }
 
@@ -151,20 +162,28 @@ All colors MUST be HSL for consistency and theming.
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
-    font-feature-settings: 'cv11', 'ss01';
+    @apply bg-background text-foreground font-dm-sans;
+    font-feature-settings: 'kern', 'liga', 'cv11', 'cv04';
     font-variant-ligatures: contextual;
     scroll-behavior: smooth;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.008em;
     line-height: 1.6;
+    font-weight: 400;
   }
 
-  /* Enhanced typography */
+  /* Modern Typography System */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    @apply font-dm-sans;
     font-weight: 600;
     line-height: 1.2;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
+    color: hsl(var(--foreground));
+  }
+
+  /* Enhanced readability */
+  p {
+    line-height: 1.7;
+    letter-spacing: -0.005em;
   }
 
   /* Smooth scrolling and improved font rendering */
@@ -173,15 +192,14 @@ All colors MUST be HSL for consistency and theming.
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern';
   }
 }
 
 @layer components {
-  /* Hero gradient background with enhanced animation */
+  /* Minimalist hero section */
   .hero-gradient {
-    background: var(--gradient-hero);
-    background-size: 400% 400%;
-    animation: gradient-shift 12s ease-in-out infinite;
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--neutral-50)) 100%);
     position: relative;
   }
 
@@ -189,107 +207,122 @@ All colors MUST be HSL for consistency and theming.
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 30% 40%, hsl(var(--primary) / 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 70% 70%, hsl(var(--secondary) / 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 90% 10%, hsl(var(--accent) / 0.3) 0%, transparent 50%);
-    animation: float 8s ease-in-out infinite;
+    background: radial-gradient(circle at 20% 80%, hsl(var(--accent) / 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, hsl(var(--lavender) / 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, hsl(var(--blush) / 0.06) 0%, transparent 50%);
   }
 
-  /* Enhanced card hover effects */
+  /* Clean card hover effects */
   .card-hover {
     transition: all var(--transition-base);
-    @apply hover:shadow-xl hover:-translate-y-2;
-    border: 1px solid hsl(var(--border) / 0.5);
+    @apply hover:shadow-lg hover:-translate-y-1;
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--card));
   }
 
   .card-hover:hover {
-    border-color: hsl(var(--primary) / 0.3);
-    background: hsl(var(--card) / 0.95);
-    backdrop-filter: blur(20px);
+    border-color: hsl(var(--accent) / 0.3);
+    box-shadow: var(--shadow-soft);
   }
 
-  /* Enhanced glow effects */
+  /* Subtle glow effects */
   .glow-on-hover {
     transition: all var(--transition-base);
-    position: relative;
   }
   
   .glow-on-hover:hover {
-    box-shadow: var(--shadow-glow), 0 0 60px hsl(var(--primary) / 0.2);
-    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-2px);
   }
 
-  /* Enhanced text animations */
+  /* Smooth text animations */
   .fade-in-up {
     opacity: 0;
-    transform: translateY(40px);
-    animation: fade-in-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transform: translateY(24px);
+    animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   .fade-in-left {
     opacity: 0;
-    transform: translateX(-40px);
-    animation: fade-in-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transform: translateX(-24px);
+    animation: fade-in-left 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   .fade-in-right {
     opacity: 0;
-    transform: translateX(40px);
-    animation: fade-in-right 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transform: translateX(24px);
+    animation: fade-in-right 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
-  /* Professional text styling */
-  .text-primary-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+  /* Modern gradient text */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .text-secondary-gradient {
-    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+  .text-gradient-soft {
+    background: var(--gradient-soft);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* Enhanced stagger animation delays */
+  /* Animation delays */
   .delay-100 { animation-delay: 0.1s; }
   .delay-200 { animation-delay: 0.2s; }
   .delay-300 { animation-delay: 0.3s; }
   .delay-400 { animation-delay: 0.4s; }
   .delay-500 { animation-delay: 0.5s; }
   .delay-600 { animation-delay: 0.6s; }
-  .delay-700 { animation-delay: 0.7s; }
 
-  /* Professional section spacing */
-  .section-padding {
-    @apply py-24 lg:py-32;
+  /* Modern Typography Classes */
+  .heading-hero {
+    @apply font-dm-sans text-5xl md:text-6xl lg:text-7xl font-bold;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
   }
 
-  /* Enhanced typography */
-  .heading-primary {
-    @apply font-playfair text-4xl md:text-5xl lg:text-6xl font-bold;
-    line-height: 1.1;
+  .heading-section {
+    @apply font-dm-sans text-3xl md:text-4xl font-semibold;
+    line-height: 1.2;
     letter-spacing: -0.02em;
   }
 
-  .heading-secondary {
-    @apply font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold;
-    line-height: 1.2;
+  .text-large {
+    @apply font-dm-sans text-lg md:text-xl;
+    line-height: 1.6;
     letter-spacing: -0.01em;
   }
 
   .text-body {
-    @apply font-inter text-base md:text-lg;
+    @apply font-dm-sans text-base md:text-lg;
     line-height: 1.7;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.005em;
   }
 
-  .text-caption {
-    @apply font-inter text-sm md:text-base;
+  .text-small {
+    @apply font-dm-sans text-sm;
     line-height: 1.6;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.005em;
+  }
+
+  /* Clean section spacing */
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+
+  /* Modern buttons */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-light text-primary-foreground font-medium;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+  }
+
+  .btn-primary:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
   }
 }
 
