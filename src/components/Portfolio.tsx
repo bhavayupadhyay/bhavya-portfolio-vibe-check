@@ -162,32 +162,32 @@ const Portfolio = () => {
         {/* Atmospheric glow */}
         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-primary/5 to-secondary/5"></div>
         
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
           <div className={`fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="font-inter text-4xl md:text-6xl lg:text-8xl font-bold mb-12 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent tracking-[0.1em] leading-tight">
-              <span className="inline-block hover:scale-105 transition-all duration-500 glow-on-hover">
+            <h1 className="heading-primary mb-8 text-primary-gradient drop-shadow-lg">
+              <span className="inline-block hover:scale-105 transition-all duration-700 glow-on-hover">
                 Bhavya Upadhyay
               </span>
             </h1>
           </div>
           <div className={`fade-in-up delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="font-inter text-lg md:text-xl lg:text-2xl mb-8 text-muted-foreground font-medium tracking-[0.3em] uppercase">
-              Data Scientist
+            <p className="font-playfair text-xl md:text-2xl lg:text-3xl mb-6 text-secondary font-semibold tracking-wider">
+              Data Scientist & AI Engineer
             </p>
           </div>
           <div className={`fade-in-up delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="font-inter text-base md:text-lg lg:text-xl mb-16 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              MS Data Science @ UCI · Building intelligent systems through data and AI
+            <p className="text-body mb-12 text-muted-foreground max-w-4xl mx-auto">
+              MS Data Science @ UCI · Transforming complex data into intelligent solutions that drive innovation and impact
             </p>
           </div>
           <div className={`fade-in-up delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-wrap gap-6 justify-center`}>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-medium text-sm tracking-wide px-8 py-4 glow-on-hover shadow-lg" onClick={handleDownloadResume}>
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-semibold text-base px-10 py-6 glow-on-hover shadow-xl rounded-xl" onClick={handleDownloadResume}>
               <Download className="mr-3 h-5 w-5" />
               Download Resume
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-inter font-medium text-sm tracking-wide px-8 py-4 backdrop-blur-sm" onClick={handleLinkedInClick}>
+            <Button size="lg" variant="outline" className="border-2 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground font-inter font-semibold text-base px-10 py-6 backdrop-blur-sm rounded-xl shadow-lg" onClick={handleLinkedInClick}>
               <Linkedin className="mr-3 h-5 w-5" />
-              LinkedIn Profile
+              Connect on LinkedIn
             </Button>
           </div>
         </div>
@@ -198,22 +198,22 @@ const Portfolio = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5"></div>
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-20">
-            <h2 className="font-inter text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent tracking-wider uppercase">About Me</h2>
-            <div className="w-32 h-1 bg-gradient-primary mx-auto rounded-full"></div>
+            <h2 className="heading-secondary mb-8 text-primary-gradient">About Me</h2>
+            <div className="w-24 h-1.5 bg-gradient-primary mx-auto rounded-full shadow-lg"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 fade-in-left">
-              <div className="bg-card/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-border/50 card-hover">
-                <p className="font-inter text-lg text-foreground leading-relaxed font-medium mb-6">
-                  A passionate data science enthusiast dedicated to solving real-world problems through machine learning and intelligent systems.
+              <div className="bg-card/90 backdrop-blur-lg p-10 rounded-3xl shadow-2xl border border-border/30 card-hover">
+                <p className="text-body text-foreground font-medium mb-8 leading-relaxed">
+                  A passionate data science professional dedicated to transforming complex challenges into innovative solutions through cutting-edge machine learning and artificial intelligence.
                 </p>
-                <p className="font-inter text-lg text-muted-foreground leading-relaxed">
-                  Experienced in building robust data pipelines, deploying AI models at scale, and optimizing complex workflows using AWS and Python.
+                <p className="text-body text-muted-foreground leading-relaxed">
+                  Expert in architecting scalable data pipelines, deploying production-ready AI models, and optimizing enterprise workflows using cloud technologies and advanced analytics.
                 </p>
               </div>
-              <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-xl border border-primary/20">
-                <p className="font-inter text-lg text-foreground leading-relaxed font-medium">
-                  Currently pursuing M.S. in Data Science from University of California, Irvine (Fall 2025–Dec 2026).
+              <div className="bg-gradient-to-br from-primary/15 via-secondary/10 to-accent/15 p-8 rounded-2xl border border-primary/30 shadow-lg">
+                <p className="text-body text-foreground leading-relaxed font-semibold">
+                  🎓 Currently pursuing M.S. in Data Science at University of California, Irvine (Fall 2025–Dec 2026)
                 </p>
               </div>
             </div>
@@ -239,8 +239,8 @@ const Portfolio = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-primary/5 to-accent/5"></div>
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-20">
-            <h2 className="font-inter text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent tracking-wider uppercase">Work Experience</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full"></div>
+            <h2 className="heading-secondary mb-8 text-secondary-gradient">Work Experience</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full shadow-lg"></div>
           </div>
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -297,8 +297,8 @@ const Portfolio = () => {
         
         <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="font-inter text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent tracking-wider uppercase">Featured Projects</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full"></div>
+            <h2 className="heading-secondary mb-8 text-primary-gradient">Featured Projects</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full shadow-lg"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             {projects.map((project, index) => (
@@ -369,8 +369,8 @@ const Portfolio = () => {
       <section className="py-24 px-4 bg-slate-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="font-inter text-2xl md:text-3xl font-light mb-6 text-white tracking-[0.3em] uppercase">Publications</h2>
-            <div className="w-24 h-px bg-slate-400 mx-auto"></div>
+            <h2 className="font-playfair text-3xl md:text-4xl font-semibold mb-8 text-white">Publications</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full shadow-lg"></div>
           </div>
           <div className="space-y-8">
             {publications.map((pub, index) => (
@@ -406,8 +406,8 @@ const Portfolio = () => {
         
         <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="font-inter text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent tracking-wider uppercase">Technical Skills</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-accent via-primary to-secondary mx-auto rounded-full"></div>
+            <h2 className="heading-secondary mb-8 text-secondary-gradient">Technical Skills</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-accent via-primary to-secondary mx-auto rounded-full shadow-lg"></div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -469,8 +469,8 @@ const Portfolio = () => {
       <section className="py-24 px-4 bg-slate-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="font-inter text-2xl md:text-3xl font-light mb-6 text-white tracking-[0.3em] uppercase">Education</h2>
-            <div className="w-24 h-px bg-slate-400 mx-auto"></div>
+            <h2 className="font-playfair text-3xl md:text-4xl font-semibold mb-8 text-white">Education</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full shadow-lg"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="border border-slate-700 bg-slate-800/50 p-8 rounded-lg backdrop-blur-sm">
@@ -519,10 +519,10 @@ const Portfolio = () => {
         
         <div className="relative max-w-4xl mx-auto text-center">
           <div className="mb-20">
-            <h2 className="font-inter text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent tracking-wider uppercase">Let's Connect</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-secondary via-primary to-accent mx-auto rounded-full"></div>
-            <p className="font-inter text-lg text-muted-foreground mt-6 max-w-2xl mx-auto leading-relaxed">
-              Ready to collaborate on exciting data science projects? Let's discuss how we can work together.
+            <h2 className="heading-secondary mb-8 text-primary-gradient">Let's Connect</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-secondary via-primary to-accent mx-auto rounded-full shadow-lg"></div>
+            <p className="text-body text-muted-foreground mt-8 max-w-3xl mx-auto leading-relaxed">
+              Ready to collaborate on innovative data science projects? Let's explore how we can create intelligent solutions together.
             </p>
           </div>
           
