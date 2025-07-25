@@ -162,33 +162,62 @@ const Portfolio = () => {
         {/* Atmospheric glow */}
         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-primary/5 to-secondary/5"></div>
         
-        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
-          <div className={`fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="heading-primary mb-8 text-primary-gradient drop-shadow-lg">
-              <span className="inline-block hover:scale-105 transition-all duration-700 glow-on-hover">
-                Bhavya Upadhyay
-              </span>
-            </h1>
-          </div>
-          <div className={`fade-in-up delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="font-playfair text-xl md:text-2xl lg:text-3xl mb-6 text-secondary font-semibold tracking-wider">
-              Data Scientist & AI Engineer
-            </p>
-          </div>
-          <div className={`fade-in-up delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <p className="text-body mb-12 text-muted-foreground max-w-4xl mx-auto">
-              MS Data Science @ UCI · Transforming complex data into intelligent solutions that drive innovation and impact
-            </p>
-          </div>
-          <div className={`fade-in-up delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-wrap gap-6 justify-center`}>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-inter font-semibold text-base px-10 py-6 glow-on-hover shadow-xl rounded-xl" onClick={handleDownloadResume}>
-              <Download className="mr-3 h-5 w-5" />
-              Download Resume
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground font-inter font-semibold text-base px-10 py-6 backdrop-blur-sm rounded-xl shadow-lg" onClick={handleLinkedInClick}>
-              <Linkedin className="mr-3 h-5 w-5" />
-              Connect on LinkedIn
-            </Button>
+        <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
+          {/* Enhanced backdrop for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/40 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl"></div>
+          
+          <div className="relative z-10 py-16 px-8">
+            <div className={`fade-in-up ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+              <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 leading-none">
+                <span className="inline-block hover:scale-105 transition-all duration-700 glow-on-hover bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent drop-shadow-2xl">
+                  Bhavya Upadhyay
+                </span>
+              </h1>
+              {/* Animated underline */}
+              <div className="w-32 h-1.5 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full shadow-lg mb-8 animate-pulse"></div>
+            </div>
+            
+            <div className={`fade-in-up delay-200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+              <div className="relative mb-8">
+                <p className="font-playfair text-2xl md:text-3xl lg:text-4xl font-semibold bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent mb-2">
+                  Data Scientist & AI Engineer
+                </p>
+                <div className="flex items-center justify-center gap-3 text-primary/80">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                  <span className="text-lg font-medium">Innovating with Intelligence</span>
+                  <div className="w-2 h-2 bg-accent rounded-full animate-pulse animation-delay-500"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div className={`fade-in-up delay-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+              <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 mb-12 shadow-xl">
+                <p className="text-lg md:text-xl lg:text-2xl text-foreground font-medium leading-relaxed max-w-5xl mx-auto">
+                  MS Data Science @ UCI · <span className="text-primary font-semibold">Transforming complex data</span> into 
+                  <span className="text-accent font-semibold"> intelligent solutions</span> that drive innovation and impact
+                </p>
+              </div>
+            </div>
+            
+            <div className={`fade-in-up delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'} flex flex-wrap gap-8 justify-center`}>
+              <Button 
+                size="lg" 
+                className="group bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-white font-semibold text-lg px-12 py-6 rounded-2xl shadow-2xl hover:shadow-glow transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 border-2 border-white/20" 
+                onClick={handleDownloadResume}
+              >
+                <Download className="mr-3 h-6 w-6 group-hover:animate-bounce" />
+                Download Resume
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="group border-3 border-primary/80 bg-white/10 backdrop-blur-lg text-primary hover:bg-primary hover:text-white font-semibold text-lg px-12 py-6 rounded-2xl shadow-xl hover:shadow-glow transform hover:-translate-y-2 hover:scale-105 transition-all duration-300" 
+                onClick={handleLinkedInClick}
+              >
+                <Linkedin className="mr-3 h-6 w-6 group-hover:animate-pulse" />
+                Connect on LinkedIn
+              </Button>
+            </div>
           </div>
         </div>
       </section>
